@@ -43,7 +43,7 @@ Em seguida, será possível acessar o projeto através do link:
 
 Como forma de armazenamento utilizei o Sqlite, para criar o arquivo execute o comando: 
 
-`touch database/database.sqlite`.
+`touch database/database.sqlite`
 
 Caso utilize o `docker` a conexão já estará configurada no `.env-example`.
 
