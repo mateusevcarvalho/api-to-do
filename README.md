@@ -41,7 +41,9 @@ Em seguida, será possível acessar o projeto através do link:
 
 ### SQlite
 
-Como forma de armazenamento utilizei o Sqlite onde o arquivo de database está localizado em: `database/database.sqlite`.
+Como forma de armazenamento utilizei o Sqlite, para criar o arquivo execute o comando: 
+
+`touch database/database.sqlite`.
 
 Caso utilize o `docker` a conexão já estará configurada no `.env-example`.
 
