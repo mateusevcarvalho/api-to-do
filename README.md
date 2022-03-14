@@ -9,20 +9,19 @@
 
 ## Configurando o projeto
 
-### Ambiente Docker
+### Execute
 
-Caso utilize `Docker`, como diferencial criei todo o ambiente de desenvolvimento, configurado para rodar esta API, basta
-executar o seguinte comando na raiz do projeto:
+``cp .env-example .env``
+``composer install``
+``php artisan key:generate``
 
-``docker-compose up -d app``
+Como forma de armazenamento utilizei o Sqlite, para criar o arquivo execute o  na raiz do projeto: 
 
-Em seguida, subirá um container onde será possível acessar o projeto pelo link:
+`touch database/database.sqlite`
 
-``http://localhost:8181``
+### Ambiente
 
-### Ambiente sem o Docker
-
-Caso não utilize o ``Docker`` o projeto necessita da versão mínima `8.0.2` do PHP para executar a API, basta executar o
+O projeto necessita da versão mínima `8.0.2` do PHP para executar a API, basta executar o
 seguinte comando:
 
 ``php artisan serve --host=0.0.0.0 --port=8181``
@@ -31,23 +30,12 @@ Em seguida, será possível acessar o projeto através do link:
 
 ``http://localhost:8181``
 
-### Execute
-
-``cp .env-example .env``
-
-```composer install```
-
-``php artisan key:generate``
 
 ### SQlite
 
-Como forma de armazenamento utilizei o Sqlite, para criar o arquivo execute o comando: 
+Configurar o caminho até o  arquivo: `/path/to/project/database/database.sqlite` no parâmetro `DB_DATABASE` no arquivo `.env`
 
-`touch database/database.sqlite`
-
-Caso utilize o `docker` a conexão já estará configurada no `.env-example`.
-
-Caso contrário, terá que configurar o caminho até o  arquivo: `/path/to/project/database/database.sqlite` no parâmetro `DB_DATABASE` no arquivo `.env`
+Certifique de possuir as extenções do PHP: `pdo_sqlite` e `sqlite3` 
 
 Para finalizar, execute o comando:
 
