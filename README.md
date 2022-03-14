@@ -11,8 +11,10 @@
 
 ### Execute
 
-``cp .env-example .env``
+``cp .env-example .env`` 
+
 ``composer install``
+
 ``php artisan key:generate``
 
 Como forma de armazenamento utilizei o Sqlite, para criar o arquivo execute o  na raiz do projeto: 
